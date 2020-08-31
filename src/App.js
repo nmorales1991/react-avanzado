@@ -1,26 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Context from './context/Context' //importo el Provider
+import Componente5 from './components/Componente5'
 
-function App() {
+const App = () => {
+  //console.log("render app")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Context> {/* englobo los componentes en los que necesito el context*/}
+        <Componente5/>
+    </Context>
+  )
 }
 
-export default App;
+export default App
